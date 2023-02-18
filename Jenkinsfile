@@ -4,23 +4,23 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'g++ temp.cpp -o temp'
-                 build job: 'PES1UG20CS273-1', wait: false
-                 echo 'Build by CS273 successful'
+                sh 'g++ PES1UG20CS325.cpp -o PES1UG20CS325'
+                 build job: 'PES1UG20CS325-1', wait: false
+                 echo 'Build by PES1UG20CS325 successful'
             }
         }
 
         stage('Test') {
             steps {
-                sh 'cat temp.cpp'
-                echo 'Test by CS273 successful'
+                sh 'cat PES1UG20CS325.cpp'
+                echo 'Test by PES1UG20CS325 successful'
             }
         }
 
         stage('Deploy') {
             steps {
                
-                echo 'Deploy by CS273 successful'
+                echo 'Deploy by PES1UG20CS325 successful'
             }
         }
     }
@@ -28,7 +28,7 @@ pipeline {
     post {
         failure {
             
-                echo 'Pipeline Failed'
+                echo 'PES1UG20CS325 Pipeline Failed'
           
         }
     }
